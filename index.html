@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Knowledge Rescue — enregistrer et transmettre les savoirs, langues et recettes des aînés avant qu'ils ne disparaissent.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23151F35'/%3E%3Crect x='6' y='14' width='3' height='12' fill='%23B4482F'/%3E%3Crect x='11' y='6' width='3' height='20' fill='%23E0A730'/%3E%3Crect x='16' y='18' width='3' height='8' fill='%23F6EFDC'/%3E%3Crect x='21' y='10' width='3' height='16' fill='%23B4482F'/%3E%3C/svg%3E">
+<title>Knowledge Rescue — Que la voix ne s'éteigne pas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">
+      <div class="logo-mark"><span></span><span></span><span></span><span></span></div>
+      Knowledge Rescue
+    </div>
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Rechercher une fiche..." aria-label="Rechercher une fiche" >
+      <a href="#gallery" class="btn">➡️</a>
+    </div>
+    <div class="nav-links">
+      <a href="#interfaces">Interfaces</a>
+      <a href="#process">Comment ça marche</a>
+      <a href="#example">Exemple</a>
+      <a href="#gallery">Explorer</a>
+    </div>
+    <a href="#contribute" class="nav-cta">Contribuer </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Patrimoine mondial vivant</div>
+    <h1>Avant que la voix ne s'éteigne,<br><em>qu'elle soit entendue.</em></h1>
+    <p class="sub">Une plateforme où les gens enregistrent les gestes, langues et recettes que leurs aînés leur ont transmis — pour que rien ne se perde à la génération suivante.</p>
+    <div class="hero-actions">
+      <a href="#contribute" class="btn-primary">Enregistrer un savoir</a>
+      <a href="#example" class="btn-ghost">Voir un exemple</a>
+    </div>
+    <div class="waveform" id="waveform"></div>
+    <div class="wave-caption">Nancy,Ouagadougou — enregistrement audio, 4min12, MOORE</div>
+  </div>
+</section>
+
+<section class="interfaces reveal" id="interfaces">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">L'application</div>
+      <h2>Trois écrans, un même geste : recueillir la parole.</h2>
+    </div>
+    <div class="phones">
+
+      <div class="phone-block">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="ps-topbar">
+              <span class="ps-time">09:41</span>
+              <span class="ps-signal">●●●</span>
+            </div>
+            <div class="ps-header">
+              <div class="ps-hello">Bonjour</div>
+              <div class="ps-title">Explorer les savoirs</div>
+            </div>
+            <div class="ps-search">Rechercher une recette, une langue…</div>
+            <div class="ps-chips">
+              <span class="chip active">Tout</span>
+              <span class="chip">Cuisine</span>
+              <span class="chip">Langues</span>
+              <span class="chip">Artisanat</span>
+            </div>
+            <div class="ps-feed-card">
+              <div class="ps-feed-thumb"></div>
+              <div>
+                <div class="ps-feed-title">Gonré de Nancy</div>
+                <div class="ps-feed-meta">Ouagadougou · MOORE</div>
+              </div>
+            </div>
+            <div class="ps-feed-card">
+              <div class="ps-feed-thumb clay"></div>
+              <div>
+                <div class="ps-feed-title">Tissage sur métier</div>
+                <div class="ps-feed-meta">Emma · tisseuse</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-caption">Accueil — parcourir par catégorie</p>
+      </div>
+
+      <div class="phone-block">
+        <div class="phone dark">
+          <div class="phone-notch"></div>
+          <div class="phone-screen dark">
+            <div class="ps-topbar light"><span class="ps-time">00:00</span><span class="ps-signal">●●●</span></div>
+            <div class="ps-rec-label">ENREGISTREMENT EN COURS</div>
+            <div class="ps-rec-timer">00:00</div>
+            <div class="ps-rec-wave">
+              <div class="rb"></div><div class="rb"></div><div class="rb"></div><div class="rb"></div>
+              <div class="rb"></div><div class="rb"></div><div class="rb"></div><div class="rb"></div>
+              <div class="rb"></div><div class="rb"></div><div class="rb"></div><div class="rb"></div>
+            </div>
+            <div class="ps-rec-btn"><span></span></div>
+            <div class="ps-rec-hint">Racontez votre savoir à voix haute</div>
+          </div>
+        </div>
+        <p class="phone-caption">Enregistrer — capter la voix, pas seulement le texte</p>
+      </div>
+
+      <div class="phone-block">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="ps-topbar"><span class="ps-time">09:44</span><span class="ps-signal">●●●</span></div>
+            <div class="ps-detail-thumb"><div class="ps-play"></div></div>
+            <div class="ps-detail-title">Gonré de Nancy</div>
+            <div class="ps-detail-meta">CUISINE · Burkina Faso ·Mooré</div>
+            <div class="ps-chain-v">
+              <div class="ps-chain-node">Grand-mère de Nancy</div>
+              <div class="ps-chain-link"></div>
+              <div class="ps-chain-node">Nancy, Ouagadougou</div>
+              <div class="ps-chain-link"></div>
+              <div class="ps-chain-node">Fatou, Paris</div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-caption">Fiche — la lignée de transmission, visible d'un regard</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="problem reveal">
+  <div class="wrap problem-grid">
+    <h2>Chaque année, des savoirs disparaissent sans laisser de trace — faute d'avoir été transmis à temps.</h2>
+    <ul class="fade-list">
+      <li>Technique de tissage sur métier vertical <span class="tag">non transmise</span></li>
+      <li>Dialecte parlé par 40 locuteurs restants <span class="tag">en danger</span></li>
+      <li>Chant de travail des rizières <span class="tag">Peu de personnes maîtrisent le travail</span></li>
+      <li>Recette de fermentation traditionnelle <span class="tag">non écrite</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="process reveal" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Le parcours</div>
+      <h2>Quatre étapes, de la mémoire d'une personne au patrimoine de tous.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Enregistrer</h3>
+        <p>Filmer, parler ou écrire un savoir — sans quitter son téléphone.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Situer</h3>
+        <p>Quelques questions simples pour dater, localiser et nommer la lignée de transmission.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>Retrouver</h3>
+        <p>Classé par lieu, langue et thème — pour que chercheurs et familles le retrouvent.</p>
+      </div>
+      <div class="step">
+        <span class="num">04</span>
+        <h3>Transmettre</h3>
+        <p>Sous-titrer, traduire, ou essayer soi-même — le savoir continue de voyager.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="example reveal" id="example">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Premier exemple</div>
+      <h2 id="exampleHeading">Aucun exemple pour l'instant — le vôtre sera le premier.</h2>
+    </div>
+    <div id="exampleContainer"></div>
+  </div>
+</section>
+
+<section class="contribute reveal" id="contribute">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Contribuer</div>
+      <h2>Ajouter un savoir à préserver.</h2>
+    </div>
+    <form class="kr-form" id="krForm">
+      <div class="form-row">
+        <div class="field">
+          <label for="f-title">Nom du savoir / de la recette</label>
+          <input type="text" id="f-title" required placeholder="Ex. Gonré de Nancy">
+        </div>
+        <div class="field">
+          <label for="f-cat">Catégorie</label>
+          <select id="f-cat" required>
+            <option value="">Choisir…</option>
+            <option>Cuisine</option>
+            <option>Langues & récits</option>
+            <option>Artisanat</option>
+            <option>Musique</option>
+            <option>Médecine traditionnelle</option>
+            <option>Rites & fêtes</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="f-region">Région / pays</label>
+          <input type="text" id="f-region" required placeholder="Ex. Nando/Burkina Faso">
+        </div>
+        <div class="field">
+          <label for="f-lang">Langue</label>
+          <input type="text" id="f-lang" placeholder="Ex. Mooré, Français">
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-chain">Chaîne de transmission</label>
+        <input type="text" id="f-chain" placeholder="Ex. Grand-mère → Nancy → Fatou">
+      </div>
+      <div class="field">
+        <label for="f-desc">Description</label>
+        <textarea id="f-desc" rows="3" required placeholder="Racontez ce savoir en quelques phrases…"></textarea>
+      </div>
+      <div class="field">
+        <label>Enregistrement audio (optionnel)</label>
+        <div class="recorder" id="recorder">
+          <button type="button" class="rec-btn" id="recBtn" aria-label="Démarrer l'enregistrement">
+            <span class="rec-dot"></span>
+          </button>
+          <div class="rec-info">
+            <div class="rec-status" id="recStatus">Appuyez pour enregistrer</div>
+            <div class="rec-timer" id="recTimer">00:00</div>
+          </div>
+          <audio id="recPlayback" controls style="display:none;"></audio>
+          <button type="button" class="rec-clear" id="recClear" style="display:none;">Supprimer</button>
+        </div>
+        <p class="form-note" id="recError" style="display:none;color:var(--clay);"></p>
+      </div>
+      <div class="field">
+        <label>Enregistrement vidéo (optionnel)</label>
+        <div class="video-recorder" id="videoRecorder">
+          <div class="video-frame">
+            <video id="videoPreview" autoplay muted playsinline></video>
+            <video id="vidPlayback" controls style="display:none;"></video>
+            <div class="video-placeholder" id="videoPlaceholder">Aperçu de la caméra</div>
+          </div>
+          <div class="vid-controls">
+            <button type="button" class="rec-btn" id="vidBtn" aria-label="Démarrer la vidéo">
+              <span class="rec-dot"></span>
+            </button>
+            <div class="rec-info">
+              <div class="rec-status" id="vidStatus">Appuyez pour filmer</div>
+              <div class="rec-timer" id="vidTimer">00:00</div>
+            </div>
+            <button type="button" class="rec-clear" id="vidClear" style="display:none;">Supprimer</button>
+          </div>
+        </div>
+        <p class="form-note" id="vidError" style="display:none;color:var(--clay);"></p>
+        <p class="form-note">Gardez la vidéo courte (10–15 s) — elle est stockée entièrement dans ce navigateur.</p>
+      </div>
+      <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">Publier la fiche</button>
+      <p class="form-note">Enregistré dans ce navigateur, à titre de démonstration.</p>
+    </form>
+  </div>
+</section>
+
+<section class="categories reveal" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Explorer</div>
+      <h2>Un patrimoine classé par ce qu'il est, pas par où il a été numérisé.</h2>
+    </div>
+   <div class="cat-grid" id="krGallery">
+  <div class="cat" data-category="Cuisine">
+    <div class="cat-head"><h3>Cuisine</h3><div class="count" id="cat-cuisine">0 fiche</div></div>
+    <div class="cat-entries" id="cat-cuisine-list"></div>
+  </div>
+  <div class="cat" data-category="Langues & récits">
+    <div class="cat-head"><h3>Langues & récits</h3><div class="count" id="cat-langues">0 fiche</div></div>
+    <div class="cat-entries" id="cat-langues-list"></div>
+  </div>
+  <div class="cat" data-category="Artisanat">
+    <div class="cat-head"><h3>Artisanat</h3><div class="count" id="cat-artisanat">0 fiche</div></div>
+    <div class="cat-entries" id="cat-artisanat-list"></div>
+  </div>
+  <div class="cat" data-category="Musique">
+    <div class="cat-head"><h3>Musique</h3><div class="count" id="cat-musique">0 fiche</div></div>
+    <div class="cat-entries" id="cat-musique-list"></div>
+  </div>
+  <div class="cat" data-category="Médecine traditionnelle">
+    <div class="cat-head"><h3>Médecine traditionnelle</h3><div class="count" id="cat-medecine">0 fiche</div></div>
+    <div class="cat-entries" id="cat-medecine-list"></div>
+  </div>
+  <div class="cat" data-category="Rites & fêtes">
+    <div class="cat-head"><h3>Rites & fêtes</h3><div class="count" id="cat-rites">0 fiche</div></div>
+    <div class="cat-entries" id="cat-rites-list"></div>
+  </div>
+</div>
+<div id="krHiddenToggle" class="hidden-toggle" style="display:none;"></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cta-final">
+      <h2>Quelqu'un dans votre famille sait faire quelque chose que personne d'autre ne sait faire.</h2>
+      <a href="#contribute" class="btn-primary">Commencer un enregistrement</a>
+    </div>
+    
+    <div class="foot-bottom">
+      <span>PATRIMOINE · MÉMOIRE · TRANSMISSION</span>
+    </div>
+    <div class="foot-middle">
+      <h1>La culture mondiale en un seul lieu</h1>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
