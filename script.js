@@ -8,6 +8,28 @@ const wf = document.getElementById('waveform');
     wf.appendChild(bar);
   });
 
+  // --- Mobile nav toggle ---
+  const navBurger = document.getElementById('navBurger');
+  const navLinks = document.getElementById('navLinks');
+  if(navBurger && navLinks){
+    const closeMenu = () => {
+      navBurger.classList.remove('open');
+      navLinks.classList.remove('open');
+      navBurger.setAttribute('aria-expanded','false');
+    };
+    navBurger.addEventListener('click', ()=>{
+      const isOpen = navLinks.classList.toggle('open');
+      navBurger.classList.toggle('open', isOpen);
+      navBurger.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMenu));
+    document.addEventListener('click', (e)=>{
+      if(!navLinks.classList.contains('open')) return;
+      if(!navLinks.contains(e.target) && !navBurger.contains(e.target)) closeMenu();
+    });
+    window.addEventListener('resize', ()=>{ if(window.innerWidth > 720) closeMenu(); });
+  }
+
   // --- Contribution form: save & render (stored in this browser only) ---
   const STORAGE_KEY = 'kr_submissions';
 
